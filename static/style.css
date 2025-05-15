@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #d6d2d2;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 24px;
+    color: #333;
+}
+
+/* Unified button styles */
+.btn{
+    display: block;
+    border: none;
+    border-radius: 6px;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.btn {
+    min-width: 220px;
+    margin: 16px auto;
+    padding: 14px 0;
+    font-size: 18px;
+}
+
+.btn-start-local ,.btn-ply-local{
+    width: 300px;
+    height: 80px;
+    margin: 60px;
+    font-size: 40px;
+}
+
+.btn:hover, .btn-start-local:hover,.btn-ply-local:hover {
+    background: #388e3c;
+}
+
+/* Layout containers */
+#main_local {
+    width: 90vw;
+    height: 90vh;
+}
+
+#board_local {
+    width: 80vh;
+    height: 80vh;
+    border: 1px solid #000;
+    margin-left: 5px;
+}
+
+#control_local {
+    width: 45vw;
+    height: 80vh;
+    margin-left: 10px;
+}
+
+/* Player base styling */
+#player_base_local {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 35vw;
+    margin: 4vw;
+}
+
+.player_label_local {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px;
+}
+
+/* Input and image styles */
+.player_label_local > input {
+    width: 10vw;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.player_label_local > img {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+#dice_div_local {
+    margin-right: 40px;
+}
+
+#start_div_local ,#ply_div_local{
+    margin-left: 40px;
+}
+
+#dice_div_local > button > img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+/* Flex utilities */
+.flex-row, .flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}

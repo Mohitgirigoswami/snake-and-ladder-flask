@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="flex-row" id="main_local">
+    <!-- Game Board Section -->
+    <div class="container">
+        <img id="board_local" src="{{ url_for('static', filename='media/images/background/snake_board_bg.png') }}"
+            alt="board_local">
+    </div>
+
+    <!-- Game Controls Section -->
+    <div class="container flex-column" id="control_local">
+        <!-- Player Labels Section -->
+        <div class="container" id="player_base_local">
+            <!-- Player 1 -->
+            <div class="player_label_local" id="ply_lcl_1">
+                <img src="{{ url_for('static', filename='media/images/pointer/col_1.png') }}" alt="Player 1 Token">
+                <input type="text" id="player_name_1" placeholder="Player 1" class="input_player_name">
+            </div>
+
+            <!-- Player 2 -->
+            <div class="player_label_local" id="ply_lcl_2">
+                <img src="{{ url_for('static', filename='media/images/pointer/col_2.png') }}" alt="Player 2 Token">
+                <input type="text" id="player_name_2" placeholder="Player 2" class="input_player_name">
+            </div>
+
+            <!-- Player 3 (Hidden by default) -->
+            <div class="player_label_local" id="ply_lcl_3" style="display: none">
+                <img src="{{ url_for('static', filename='media/images/pointer/col_3.png') }}" alt="Player 3 Token">
+                <input type="text" id="player_name_3" placeholder="Player 3" class="input_player_name">
+            </div>
+
+            <!-- Player 4 (Hidden by default) -->
+            <div class="player_label_local" id="ply_lcl_4" style="display: none">
+                <img src="{{ url_for('static', filename='media/images/pointer/col_4.png') }}" alt="Player 4 Token">
+                <input type="text" id="player_name_4" placeholder="Player 4" class="input_player_name">
+            </div>
+        </div>
+
+        <!-- Game Controls Buttons -->
+        <div class="flex-row">
+            <!-- Dice Section -->
+            <div class="container" id="dice_div_local">
+                <button class="btn">
+                    <img src="{{ url_for('static', filename='media/images/dice/dice_0.png') }}" alt="dice">
+                </button>
+            </div>
+
+            <!-- Game Control Buttons -->
+            <div class="container" id="start_div_local" style="padding: 0px;">
+                <button onclick="start_local()" id="start_game_local" class="btn-start-local btn">
+                    Start Game
+                </button>
+                <button onclick="restart_local()" id="restart_game_local" class="btn-start-local btn" disabled="true"
+                    style="display: none">
+                    Restart Game
+                </button>
+                <button onclick="end_local()" id="end_game_local" class="btn-start-local btn" disabled="false">
+                    Go to home
+                </button>
+            </div>
+
+            <!-- Player Management Buttons -->
+            <div class="container" id="ply_div_local" style="padding: 0px;">
+                <button onclick="add_player()" id="add_player_game_local" class="btn btn-ply-local">
+                    Add the player
+                </button>
+                <button onclick="remove_player()" id="remove_player_game_local" class="btn btn-ply-local"
+                    style="font-size: 33px;">
+                    Remove the player
+                </button>
+            </div>
+        </div>
+        <div id="error" class="container" style="display: none;">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
